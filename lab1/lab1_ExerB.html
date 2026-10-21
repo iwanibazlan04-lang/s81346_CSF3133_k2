@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Campus Coding Club</title>
+
+    <!-- Simple styling: background colour and centred text -->
+    <style>
+        body {
+            background-color: #f3eefa;
+            text-align: center;
+        }
+        ul {
+            display: inline-block;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <!--
+    ERROR LIST (line numbers refer to the ORIGINAL given code)
+
+    Line 1  : <html>
+      Error 1 (Line 1): missing DOCTYPE declaration. Fix: added <!DOCTYPE html> at the top
+      Error 2 (Line 1): html tag has no lang attribute. Fix: <html lang="en">
+
+    Line 3  : <title>Campus Coding Club
+      Error 3 (Line 3): title tag is not closed. Fix: added </title>
+
+    Line 7  : <h1>Welcome to Campus Coding Club</h2>
+      Error 4 (Line 7): h1 is closed with the wrong tag. Fix: </h1>
+
+    Line 8  : <p>We meet every <strong><em>Wednesday</strong></em> at Lab 3.
+      Error 5 (Line 8): p tag is not closed. Fix: added </p>
+      Error 6 (Line 8): strong and em are nested in the wrong order. Fix: <strong><em>Wednesday</em></strong>
+
+    Line 9  : <h2>Our Activities<h2>
+      Error 7 (Line 9): the second h2 is an opening tag, not a closing tag. Fix: </h2>
+
+    Line 11 : <li>Weekly coding sessions
+      Error 8 (Line 11): li tag is not closed. Fix: added </li>
+
+    Line 14 : </ol>
+      Error 9 (Line 14): ul list is closed with the wrong tag. Fix: </ul>
+
+    Line 15 : <p>Visit our university: <a href=www.umt.edu.my>UMT Website</a></p>
+      Error 10 (Line 15): href value has no quotation marks. Fix: href="..."
+      Error 11 (Line 15): link has no protocol so it is read as a relative link. Fix: https://www.umt.edu.my
+
+    Line 16 : <img src="club.jpg">
+      Error 12 (Line 16): img has no alt attribute. Fix: added a meaningful alt text
+
+    Line 17 : <p>Copyright (c) 2026 Campus Coding Club & Friends</p>
+      Error 13 (Line 17): (c) is not a proper special character. Fix: &copy;
+      Error 14 (Line 17): ampersand is not escaped. Fix: &amp;
+
+    Line 18 : </body>
+      Error 15 (Line 18): missing closing html tag. Fix: added </html> at the end of the file
+    -->
+
+    <!-- Main heading -->
+    <h1>Welcome to Campus Coding Club</h1>
+
+    <!-- Meeting information -->
+    <p>We meet every <strong><em>Wednesday</em></strong> at Lab 3.</p>
+
+    <!-- Activities section (unordered list) -->
+    <h2>Our Activities</h2>
+    <ul>
+        <li>Weekly coding sessions</li>
+        <li>Hackathon</li>
+        <li>Web design workshop</li>
+    </ul>
+
+    <!-- Link to the university website -->
+    <p>Visit our university: <a href="https://www.umt.edu.my">UMT Website</a></p>
+
+    <!-- Footer with special characters -->
+    <p>&copy; 2026 Campus Coding Club &amp; Friends</p>
+</body>
+</html>
