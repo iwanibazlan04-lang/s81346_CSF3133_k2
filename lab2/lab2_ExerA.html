@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TechFest 2026 - Faculty Event Page</title>
+</head>
+<body>
+
+  <!-- ===== HEADER: event name and tagline ===== -->
+  <header>
+    <h1>TechFest 2026</h1>
+    <p>Code. Create. Connect. - One day of learning and innovation.</p>
+  </header>
+
+  <!-- ===== NAVIGATION: internal links to each section ===== -->
+  <nav>
+    <a href="#about">About</a> |
+    <a href="#schedule">Schedule</a> |
+    <a href="#register">Register</a>
+  </nav>
+
+  <hr>
+
+  <main>
+
+    <!-- ===== SECTION 1: ABOUT THE EVENT ===== -->
+    <section id="about">
+      <h2>About the Event</h2>
+      <p>TechFest 2026 is a one-day event organised by the Faculty of Computing on 15 November 2026. Join us for talks, hands-on workshops and a friendly hackathon.</p>
+
+      <!-- Article 1: a speaker -->
+      <article>
+        <h3>Keynote Speaker: Dr. Nuh Ayden</h3>
+        <p>Dr. Nuh Ayden is a senior software architect with more than 15 years of experience. She will share how modern software shapes our future.</p>
+      </article>
+
+      <!-- Article 2: an activity -->
+      <article>
+        <h3>Activity: Hackathon Challenge</h3>
+        <p>Form a team of up to four members and build a working prototype in two hours. Exciting prizes are waiting for the best teams!</p>
+      </article>
+    </section>
+
+    <hr>
+
+    <!-- ===== SECTION 2: EVENT SCHEDULE (TABLE) ===== -->
+    <section id="schedule">
+      <h2>Event Schedule</h2>
+
+      <table >
+        <caption>TechFest 2026 - Programme on 15 November 2026</caption>
+
+        <!-- Header row using th cells -->
+        <tr>
+          <th>Time</th>
+          <th>Activity</th>
+          <th>Venue</th>
+          <th>Person in Charge</th>
+        </tr>
+
+        <!-- Row 1: morning registration -->
+        <tr>
+          <td>08:00 - 09:00</td>
+          <td>Registration and Welcome Coffee</td>
+          <td>Main Lobby</td>
+          <td>Registration Team</td>
+        </tr>
+
+        <!-- Row 2: opening keynote -->
+        <tr>
+          <td>09:00 - 10:30</td>
+          <td>Opening Keynote: The Future of Software</td>
+          <td>Main Hall</td>
+          <td>Dr. Nuh Ayden</td>
+        </tr>
+
+        <!-- Row 3: Workshop 1 - venue cell uses ROWSPAN=2 (two sessions in the same venue) -->
+        <tr>
+          <td>10:30 - 11:30</td>
+          <td>Workshop 1: Building Web Pages with HTML</td>
+          <td rowspan="2">Computer Lab 1</td>
+          <td>Mr. Nasr Adyan</td>
+        </tr>
+
+        <!-- Row 4: Workshop 2 - venue cell omitted because of the rowspan above -->
+        <tr>
+          <td>11:30 - 12:30</td>
+          <td>Workshop 2: Introduction to Git and GitHub</td>
+          <td>Ms. Hilya Husna</td>
+        </tr>
+
+        <!-- Row 5: Lunch break - COLSPAN=3 (spans Activity, Venue and Person in Charge) -->
+        <tr>
+          <td>12:30 - 14:00</td>
+          <td colspan="3">Lunch Break</td>
+        </tr>
+
+        <!-- Row 6: afternoon hackathon -->
+        <tr>
+          <td>14:00 - 16:00</td>
+          <td>Hackathon Challenge</td>
+          <td>Computer Lab 2</td>
+          <td>Ms. Hilya Huda</td>
+        </tr>
+
+        <!-- Row 7: evening closing -->
+        <tr>
+          <td>16:00 - 17:00</td>
+          <td>Closing Ceremony and Prize Presentation</td>
+          <td>Main Hall</td>
+          <td>Prof. Nadine Adelia</td>
+        </tr>
+      </table>
+    </section>
+
+    <hr>
+
+    <!-- ===== SECTION 3: REGISTRATION FORM ===== -->
+    <section id="register">
+      <h2>Registration</h2>
+
+      <form action="register.html" method="post">
+
+        <!-- Text inputs: label "for" matches input "id" -->
+        <p>
+          <label for="fullname">Full Name:</label>
+          <input type="text" id="fullname" name="fullname" required>
+        </p>
+
+        <p>
+          <label for="matric">Matric Number:</label>
+          <input type="text" id="matric" name="matric" required>
+        </p>
+
+        <p>
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required>
+        </p>
+
+        <!-- Radio buttons: all share name="year" so only one can be selected -->
+        <p>Year of Study:</p>
+        <p>
+          <input type="radio" id="year1" name="year" value="1" required>
+          <label for="year1">Year 1</label>
+
+          <input type="radio" id="year2" name="year" value="2">
+          <label for="year2">Year 2</label>
+
+          <input type="radio" id="year3" name="year" value="3">
+          <label for="year3">Year 3</label>
+
+          <input type="radio" id="year4" name="year" value="4">
+          <label for="year4">Year 4</label>
+        </p>
+
+        <!-- Checkboxes: sessions the student wants to join -->
+        <p>Sessions to Join:</p>
+        <p>
+          <input type="checkbox" id="s1" name="sessions" value="keynote">
+          <label for="s1">Opening Keynote</label><br>
+
+          <input type="checkbox" id="s2" name="sessions" value="html-workshop">
+          <label for="s2">Workshop 1: HTML</label><br>
+
+          <input type="checkbox" id="s3" name="sessions" value="git-workshop">
+          <label for="s3">Workshop 2: Git and GitHub</label><br>
+
+          <input type="checkbox" id="s4" name="sessions" value="hackathon">
+          <label for="s4">Hackathon Challenge</label>
+        </p>
+
+        <!-- Drop-down list: Programme / Faculty -->
+        <p>
+          <label for="programme">Programme / Faculty:</label>
+          <select id="programme" name="programme">
+            <option value="">-- Please select --</option>
+            <option value="se">Software Engineering</option>
+            <option value="cs">Computer Science</option>
+            <option value="it">Information Technology</option>
+            <option value="ds">Data Science</option>
+          </select>
+        </p>
+
+        <!-- Submit button -->
+        <p>
+          <input type="submit" value="Register Now">
+        </p>
+
+      </form>
+    </section>
+
+  </main>
+
+  <hr>
+
+  <!-- ===== FOOTER: organiser name and copyright ===== -->
+  <footer>
+    <p>Organised by the TechFest Organising Committee, Faculty of Computing</p>
+    <p>&copy; 2026 TechFest. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
