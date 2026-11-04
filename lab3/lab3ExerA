@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CampusBake - Online Order Page</title>
+</head>
+<body>
+
+  <!-- ========== 1. HEADER: bakery name (h1) + slogan (span inside h1) ========== -->
+  <div id="header" align="center">
+    <h1>CampusBake <span>- Freshly baked for every student!</span></h1>
+  </div>
+
+  <!-- ========== 2. NAVIGATION: three inline links separated by " | " ========== -->
+  <div id="nav" align="center">
+    <a href="#header">Home</a> |
+    <a href="#order">Order Now</a> |
+    <a href="#calculator">Price Calculator</a> |
+    <a href="#sidebar">Price List</a>
+  </div>
+
+  <!-- ========== 3. CONTENT: introduction + order form + calculator ========== -->
+  <div id="content" align="center">
+
+    <h2>Welcome to CampusBake</h2>
+
+    <!-- Introduction paragraph with inline elements: strong, em, span, a -->
+    <p>
+      Welcome to <strong>CampusBake</strong>, the <em>friendliest</em> bakery on campus.
+      <span>Pre-order today and skip the queue.</span>
+      Check our <a href="#sidebar">price list</a> before you order.
+    </p>
+
+    <!-- Order form block (HTML5 form elements) -->
+    <div id="order">
+      <h2>Order Form</h2>
+      <form action="#" method="post">
+
+        <!-- Customer name: placeholder, required, autofocus -->
+        <p>
+          <label for="cname">Customer name:</label><br>
+          <input type="text" id="cname" name="cname" placeholder="Enter your full name" required autofocus>
+        </p>
+
+        <!-- Phone number: type tel, required -->
+        <p>
+          <label for="phone">Phone number:</label><br>
+          <input type="tel" id="phone" name="phone" placeholder="012-3456789" required>
+        </p>
+
+        <!-- E-mail: type email, required -->
+        <p>
+          <label for="email">E-mail:</label><br>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        </p>
+
+        <!-- Pick-up date and time -->
+        <p>
+          <label for="pdate">Pick-up date:</label><br>
+          <input type="date" id="pdate" name="pdate">
+        </p>
+        <p>
+          <label for="ptime">Pick-up time:</label><br>
+          <input type="time" id="ptime" name="ptime">
+        </p>
+
+        <!-- Flavour: input linked to a datalist with 4+ flavours -->
+        <p>
+          <label for="flavour">Flavour:</label><br>
+          <input type="text" id="flavour" name="flavour" list="flavours" placeholder="Choose or type a flavour">
+          <datalist id="flavours">
+            <option value="Chocolate"></option>
+            <option value="Vanilla"></option>
+            <option value="Strawberry"></option>
+            <option value="Red Velvet"></option>
+            <option value="Pandan"></option>
+          </datalist>
+        </p>
+
+        <!-- Icing colour: type color -->
+        <p>
+          <label for="icing">Icing colour:</label><br>
+          <input type="color" id="icing" name="icing" value="#ff99cc">
+        </p>
+
+        <!-- Sweetness level: range slider 1 to 5 -->
+        <p>
+          <label for="sweet">Sweetness level (1-5):</label><br>
+          <input type="range" id="sweet" name="sweet" min="1" max="5" step="1" value="3"
+                 oninput="sweetOut.value = this.value">
+          <output id="sweetOut" name="sweetOut">3</output>
+        </p>
+
+        <!-- Submit button -->
+        <p>
+          <button type="submit">Submit Order</button>
+        </p>
+
+      </form>
+    </div>
+
+    <!-- ========== 6. PRICE CALCULATOR: form oninput + output ========== -->
+    <div id="calculator">
+      <h2>Price Calculator</h2>
+      <form oninput="total.value = (Number(cupcakes.value) * 3 + Number(slices.value) * 5).toFixed(2)">
+        <p>
+          <label for="cupcakes">Cupcakes (RM 3.00 each):</label>
+          <input type="number" id="cupcakes" name="cupcakes" min="0" value="0">
+        </p>
+        <p>
+          <label for="slices">Cake Slices (RM 5.00 each):</label>
+          <input type="number" id="slices" name="slices" min="0" value="0">
+        </p>
+        <p>
+          Total price: RM
+          <output name="total" for="cupcakes slices">0.00</output>
+        </p>
+      </form>
+    </div>
+
+  </div>
+
+  <!-- ========== 4. SIDEBAR: price list using a list + HTML entities ========== -->
+  <div id="sidebar" align="center">
+    <h2>Price List</h2>
+    <p>CampusBake&reg;</p>
+    <ul style="display:inline-block; text-align:left;">
+      <li>Cupcake: RM 3.00</li>
+      <li>Cake Slice: RM 5.00</li>
+      <li>Whole Cake: RM 45.00</li>
+    </ul>
+    <p>Special: Orders &gt; 10 pieces get a free drink!</p>
+    <p>Note: Minimum order &lt; 3 pieces is not accepted for delivery.</p>
+  </div>
+
+  <!-- ========== 5. FOOTER: entities (nbsp, copy, pound, euro) ========== -->
+  <div id="footer" align="center">
+    <p>&copy; 2026 CampusBake&reg; &nbsp;|&nbsp; Universiti Malaysia Terengganu</p>
+    <p>Exchange guide: RM 5.00 &asymp; &pound;0.90 &asymp; &euro;1.05 (example only)</p>
+  </div>
+
+  <!-- ========== 7. TESTING OBSERVATIONS ==========
+  Test 1: Clicked Submit with all fields empty.
+    Result: The form was NOT submitted. The browser showed a message
+    "Please fill out this field" on the first empty required field
+    (Customer name) and blocked submission.
+
+  Test 2: Entered "myemail" in the e-mail field and submitted.
+    Result: The form was NOT submitted. The browser showed a message like
+    "Please include an '@' in the email address" because type="email"
+    validates the format.
+
+  Conclusion: The attributes "required" and type="email" give built-in
+  validation without any JavaScript.
+  -->
+
+</body>
+</html>
