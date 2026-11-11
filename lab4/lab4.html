@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab 4 - Responsive Webpage</title>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Internal CSS -->
+  <style>
+    h2 {
+      text-decoration: underline;
+      text-decoration-color: #e67e22;
+    }
+    .old-price {
+      text-decoration: line-through;
+      color: #888;
+    }
+    .highlight {
+      text-decoration: overline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>My Web Design Lab</h1>
+    <p>CSF3133: Web-Based Interface Design</p>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#media">Media</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- SECTION 1: ABOUT -->
+    <section id="about">
+      <h2>About This Page</h2>
+      <article>
+        <h3>What I Learned</h3>
+        <p>
+          This page uses semantic HTML5 elements, embedded media,
+          and CSS styling. Text can be <span class="highlight">overlined</span>,
+          <span class="old-price">line-through</span>, or underlined.
+        </p>
+      </article>
+    </section>
+
+    <!-- SECTION 2: MEDIA -->
+    <section id="media">
+      <h2>Video Section</h2>
+      <article>
+        <figure>
+          <video controls width="480">
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <figcaption>Figure 1: Sample video embedded using the &lt;video&gt; element.</figcaption>
+        </figure>
+      </article>
+    </section>
+
+    <!-- SECTION 3: FORM -->
+    <section id="contact">
+      <h2>Contact Form</h2>
+      <article>
+        <form action="#" method="post">
+
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+
+          <label for="email">Email:</label>
+          <input type="text" id="email" name="email" placeholder="you@example.com" required>
+
+          <fieldset>
+            <legend>Gender:</legend>
+            <label><input type="radio" name="gender" value="male"> Male</label>
+            <label><input type="radio" name="gender" value="female"> Female</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Favorite Hobbies:</legend>
+            <label><input type="checkbox" name="hobby" value="reading"> Reading</label>
+            <label><input type="checkbox" name="hobby" value="gaming"> Gaming</label>
+            <label><input type="checkbox" name="hobby" value="sports"> Sports</label>
+            <label><input type="checkbox" name="hobby" value="coding"> Coding</label>
+          </fieldset>
+
+          <input type="submit" value="Submit">
+        </form>
+      </article>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 My Web Design Lab. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
