@@ -1,0 +1,115 @@
+/* ===== General page styles ===== */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #222222;
+  background-color: #f4f8fa;
+  margin: 0;
+}
+
+/* ===== Text decoration (Section 5) ===== */
+h1 { text-decoration: overline; }
+h2 { text-decoration: underline; }
+
+/* Old price crossed out */
+.old-price {
+  text-decoration: line-through;
+  color: #888888;
+}
+
+.price {
+  color: #c62828;
+  font-weight: bold;
+}
+
+/* ===== Navigation bar (Section 2) ===== */
+nav ul {
+  list-style-type: none;      
+  margin: 0;
+  padding: 0;
+  background-color: #073b4c;
+  text-align: center;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  display: block;
+  padding: 14px 24px;
+  text-decoration: none;      
+  text-transform: uppercase;
+}
+
+nav a:link,
+nav a:visited {
+  color: #ffffff;
+}
+
+nav a:hover {
+  background-color: #118ab2; 
+}
+
+/* ===== Interactive link states (Section 6) =====*/
+a:link    { color: #0b6e8a; }
+a:visited { color: #7b1fa2; }
+a:hover   { color: #e65100; }
+a:active  { color: #d50000; }
+
+/* ===== Sections (ID selectors) ===== */
+#destinations,
+#video,
+#trip {
+  width: 90%;                 
+  margin: 20px auto;
+  padding: 10px;
+}
+
+#destinations { background-color: #ffffff; }
+#trip         { background-color: #ffffff; }
+
+/* ===== Cards (class selector) ===== */
+.card {
+  border: 1px solid #cccccc;
+  padding: 12px;
+  margin-bottom: 12px;
+  background-color: #fafafa;
+}
+
+.center {
+  text-align: center;
+}
+
+figcaption {
+  font-style: italic;
+  margin-top: 6px;
+}
+
+/* ===== Video: responsive ===== */
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===== Form (Section 7) ===== */
+.trip-form {
+  background-color: #e3f2fd;
+  padding: 16px;
+  border: 2px solid #0b6e8a;
+  width: 90%;
+  max-width: 500px;
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: #073b4c;
+  color: #ffffff;
+  text-align: center;
+  padding: 16px;
+}
+
+footer a:link,
+footer a:visited {
+  color: #ffd54f;
+}
