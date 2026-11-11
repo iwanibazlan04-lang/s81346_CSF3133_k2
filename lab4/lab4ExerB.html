@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- Part 2 (Q7): viewport meta for responsive layout -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>e-Café Campus</title>
+    <!-- Part 2 (Q5): link to external style sheet -->
+    <link rel="stylesheet" href="cafe.css">
+</head>
+<body>
+<!-- Error 1 (Line 7): HTML comment used inside CSS -> changed to /* */ (now in cafe.css) -->
+<!-- Error 2 (Line 9): list-style-type: no -> none -->
+<!-- Error 3 (Lines 14-15): a:hover was before a:visited -> reordered to LVHA -->
+<!-- Error 4 (Line 17): text-decoration: overlined -> none -->
+<!-- Error 5 (Line 19): #intro selector -> .intro (HTML uses class) -->
+<!-- Error 6 (Line 21): missing closing brace for .intro -> added } -->
+<!-- Error 7 (Line 22): highlight -> .highlight (missing dot) -->
+<!-- Error 8 (Line 34): href="menu" -> href="#menu" -->
+<!-- Error 9 (Lines 42, 46): duplicate id="item" -> class="item" -->
+<!-- Error 10 (Line 54): type="mp4" -> type="video/mp4" -->
+<!-- Error 11 (Line 53): added controls attribute to <video> -->
+
+<header>
+    <h1>e-Café Campus</h1>
+</header>
+
+<!-- Navigation bar (styled in cafe.css) -->
+<nav>
+    <ul>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#video">Video</a></li>
+        <li><a href="#feedback">Feedback</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- Menu section with promotion prices (Q6) -->
+<section id="menu">
+    <h2>Today's Menu</h2>
+    <p class="intro">Freshly brewed coffee and local delights every day.</p>
+    <article class="item">
+        <h3>Kopi Tarik</h3>
+        <p>Only <span class="old-price">RM 4.50</span>
+        <span class="highlight">RM 3.50</span></p>
+    </article>
+    <article class="item">
+        <h3>Nasi Lemak</h3>
+        <p>Only <span class="old-price">RM 6.50</span>
+        <span class="highlight">RM 5.00</span></p>
+    </article>
+</section>
+
+<!-- Video section with figure and caption (Q7) -->
+<section id="video">
+    <h2>Watch Our Story</h2>
+    <figure>
+        <video controls>
+            <source src="cafe.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <figcaption>Our story: from a small campus stall to your favourite café.</figcaption>
+    </figure>
+</section>
+
+<!-- Feedback form section (Q8) -->
+<section id="feedback">
+    <h2>Give Us Feedback</h2>
+    <form class="feedback-form" action="#" method="post">
+        <p>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name">
+        </p>
+        <p>
+            <label for="email">E-mail:</label><br>
+            <input type="email" id="email" name="email">
+        </p>
+        <p>
+            Visit type:<br>
+            <input type="radio" id="dinein" name="visit" value="dine-in">
+            <label for="dinein">Dine-in</label>
+            <input type="radio" id="takeaway" name="visit" value="take-away">
+            <label for="takeaway">Take-away</label>
+        </p>
+        <p>
+            Favourite items:<br>
+            <input type="checkbox" id="kopi" name="fav" value="kopi-tarik">
+            <label for="kopi">Kopi Tarik</label>
+            <input type="checkbox" id="nasi" name="fav" value="nasi-lemak">
+            <label for="nasi">Nasi Lemak</label>
+            <input type="checkbox" id="teh" name="fav" value="teh-ais">
+            <label for="teh">Teh Ais</label>
+        </p>
+        <p>
+            <button type="submit">Submit</button>
+        </p>
+    </form>
+</section>
+
+<!-- Footer with address and mailto link (Q9) -->
+<footer id="contact">
+    <p>&copy; 2026 e-Café Campus</p>
+    <address>
+        Contact us: <a href="mailto:cafe@umt.edu.my">cafe@umt.edu.my</a>
+    </address>
+</footer>
+</body>
+</html>
