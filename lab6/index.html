@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Dev Quiz - CSF3133 Lab 6</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER: introduces the quiz -->
+  <header class="quiz-header">
+    <h1>Web Development Quiz</h1>
+    <p>CSF3133 Web-Based Interface Design &ndash; Lab Exercise 6. Answer each question before the timer runs out.</p>
+  </header>
+
+  <main class="quiz-main">
+
+    <!-- Start screen -->
+    <section id="start-screen" class="card">
+      <h2>Ready to begin?</h2>
+      <p>There are 8 questions in a random order. You have 15 seconds for each one.</p>
+      <button id="start-btn" class="btn btn-primary" type="button">Start quiz</button>
+    </section>
+
+    <!-- QUESTION SECTION: question, options and timer -->
+    <section id="quiz-screen" class="card hidden" aria-live="polite">
+      <div class="quiz-top">
+        <span id="progress">Question 1 of 8</span>
+        <span id="timer" class="timer" role="timer">15</span>
+      </div>
+      <div class="timer-track"><div id="timer-bar" class="timer-bar"></div></div>
+
+      <h2 id="question-text" class="question"></h2>
+      <div id="options" class="options"></div>
+
+      <!-- FEEDBACK SECTION: correct / incorrect after each answer -->
+      <div id="feedback" class="feedback hidden" role="status"></div>
+
+      <!-- BUTTONS: submit answer and navigate between questions -->
+      <div class="actions">
+        <button id="submit-btn" class="btn btn-primary" type="button" disabled>Submit answer</button>
+        <button id="next-btn" class="btn btn-secondary hidden" type="button">Next question</button>
+      </div>
+    </section>
+
+    <!-- Result screen -->
+    <section id="result-screen" class="card hidden">
+      <h2>Quiz complete</h2>
+      <p id="result-text"></p>
+      <button id="restart-btn" class="btn btn-primary" type="button">Try again</button>
+    </section>
+
+  </main>
+
+  <!-- FOOTER: shows the user's score -->
+  <footer class="quiz-footer">
+    <p id="score">Score: 0 / 0</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
