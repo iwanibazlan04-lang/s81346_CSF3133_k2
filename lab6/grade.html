@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Grade Calculator</title>
+    <!-- Part 2 (Step 9): sambungkan fail CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Student Grade Calculator</h2>
+    <!-- Error 1 dibetulkan: onsubmit mesti "return checkMark()" supaya return false menghalang borang dihantar semula -->
+    <form name="gradeForm" onsubmit="return checkMark()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br>
+        <label for="mark">Mark (0-100):</label>
+        <input type="text" id="mark" name="mark"><br>
+        <button type="submit">Check Grade</button>
+        <!-- Part 2 (Step 7): butang Random Mark. type="button" supaya TIDAK menghantar borang -->
+        <button type="button" onclick="randomMark()">Random Mark</button>
+    </form>
+    <p id="result"></p>
+    <!-- Part 2 (Step 8): tempat paparan tarikh & masa -->
+    <p id="dateTime"></p>
+    <!-- Error 2 dibetulkan: showtable() -> showTable() (JavaScript case-sensitive) -->
+    <button onclick="showTable()">Show Grade Table</button>
+    <div id="tableContainer"></div>
+    <!-- Error 3 dibetulkan: grades.js -> grade.js (nama fail sebenar) -->
+    <script src="grade.js"></script>
+</body>
+</html>

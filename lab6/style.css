@@ -1,29 +1,49 @@
-/* ===== General page ===== */
-body { font-family: Arial, sans-serif; background: #f2f4f7; margin: 0; color: #222; }
-section, footer { background: #fff; max-width: 700px; margin: 12px auto; padding: 14px 18px; border-radius: 6px; }
-
-/* ===== Header ===== */
-header { background: #1b4f72; color: #fff; max-width: 700px; margin: 12px auto; padding: 14px 18px; border-radius: 6px; }
-header h1 { margin: 0 0 4px; font-size: 22px; }
-header p { margin: 0; font-size: 13px; }
-
-/* ===== Buttons (padding, background, pointer, hover) ===== */
-button { padding: 8px 16px; background: #1f6fb2; color: #fff; border: none; border-radius: 4px; cursor: pointer; font-size: 14px; margin-right: 6px; }
-button:hover { background: #154c7a; }
-input[type="text"] { padding: 7px; border: 1px solid #aaa; border-radius: 4px; }
-
-/* ===== Images: fixed size ===== */
-.arena { display: flex; justify-content: center; align-items: center; gap: 30px; margin-top: 14px; text-align: center; }
-img { width: 120px; height: 120px; border-radius: 12px; background: #607d8b; }
-.vs { font-weight: bold; font-size: 18px; }
-
-/* ===== Result and score ===== */
-#result { font-size: 20px; font-weight: bold; min-height: 26px; }
-.score { font-size: 15px; }
-
-/* ===== History table ===== */
-table { border-collapse: collapse; width: 100%; margin-bottom: 10px; }
-th, td { border: 1px solid #1b4f72; padding: 8px; text-align: center; }
-th { background: #1b4f72; color: #fff; }
-
-footer { text-align: center; font-size: 12px; color: #555; }
+/* Part 2 (Step 9): gaya halaman dan jadual gred */
+body {
+    font-family: Arial, sans-serif;
+    margin: 30px;
+}
+h2 {
+    color: #0b2545;
+}
+input {
+    padding: 6px;
+    margin: 4px 0 10px 0;
+    border: 1px solid #999;
+    border-radius: 4px;
+}
+button {
+    padding: 8px 14px;
+    margin-top: 6px;
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+/* kesan hover pada butang */
+button:hover {
+    background-color: #0b2545;
+}
+#result {
+    font-weight: bold;
+}
+#dateTime {
+    font-size: 0.85em;
+    font-weight: bold;
+    color: #2e7d32;
+}
+/* jadual: border, padding, header background */
+table {
+    border-collapse: collapse;
+    margin-top: 12px;
+}
+th, td {
+    border: 1px solid #333;
+    padding: 8px 20px;
+    text-align: center;
+}
+th {
+    background-color: #0b2545;
+    color: white;
+}
