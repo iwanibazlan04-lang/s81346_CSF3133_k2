@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Ticket Booking</title>
+</head>
+<body>
+<!-- ERRORS FOUND AND FIXED (line numbers refer to the given code):
+Error 1 (Line 1): missing "html" in the doctype, fixed to <!DOCTYPE html>
+Error 2 (Line 9): wrong nesting, </h1> closed before </span>, fixed to </span></h1>
+Error 3 (Lines 11 and 36): <span> used as a block container for h2, p and form, changed to <div>
+Error 4 (Line 13): "<" must be escaped, changed to &lt;
+Error 5 (Line 13): "&amp" is missing the semicolon, changed to &amp;
+Error 6 (Line 14): input values are strings so "2"+"3" gives "23", fixed with Number()
+Error 7 (Line 18): type="emial" is invalid, changed to type="email"
+Error 8 (Line 22): list="movies" does not match datalist id="movielist", changed to list="movielist"
+Error 9 (Line 32): range min="5" max="1" is reversed, changed to min="1" max="5"
+Error 10 (Line 33): output for="adult kid" refers to a non-existent id, changed to "adult child"
+Error 11 (Line 38): &Copy; is case-sensitive and invalid, changed to &copy;
+Error 12 (Lines 40 to 55): duplicate stray closing tags and the text "54", removed
+-->
+
+<div id="header">
+    <h1>e-Ticket <span>Your Campus Cinema</span></h1>
+</div>
+
+<!-- NEW (Part 2, task 5): sidebar listing movies now showing.
+     Each item uses inline elements: strong for title, span for age rating, a for trailer link -->
+<div id="sidebar">
+    <h3>Now Showing</h3>
+    <p><strong>Space Rangers</strong> <span>(PG-13)</span> <a href="https://www.youtube.com/results?search_query=Space+Rangers+trailer" target="_blank" rel="noopener">Trailer</a></p>
+    <p><strong>Kampung Comedy</strong> <span>(U)</span> <a href="https://www.youtube.com/results?search_query=Kampung+Comedy+trailer" target="_blank" rel="noopener">Trailer</a></p>
+    <p><strong>Midnight Library</strong> <span>(18)</span> <a href="https://www.youtube.com/results?search_query=Midnight+Library+trailer" target="_blank" rel="noopener">Trailer</a></p>
+</div>
+
+<div id="content">
+    <h2>Book Your Ticket</h2>
+    <p>Promotion: tickets &lt; RM10 for students &amp; staff!</p>
+    <!-- oninput: total adds adult + child as numbers; price = adult x RM12 + child x RM8 -->
+    <form action="booking.php" oninput="total.value = Number(adult.value) + Number(child.value); price.value = Number(adult.value) * 12 + Number(child.value) * 8">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required autofocus><br>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email"><br>
+
+        <!-- NEW (task 6): phone number, required with placeholder -->
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" placeholder="e.g. 012-3456789" required><br>
+
+        <label for="date">Show date:</label>
+        <input type="date" id="date" name="date"><br>
+
+        <!-- NEW (task 6): show time -->
+        <label for="time">Show time:</label>
+        <input type="time" id="time" name="time"><br>
+
+        <label for="movie">Movie:</label>
+        <input id="movie" name="movie" list="movielist"><br>
+        <datalist id="movielist">
+            <option value="Space Rangers">
+            <option value="Kampung Comedy">
+            <option value="Midnight Library">
+        </datalist>
+
+        <label for="adult">Adult tickets:</label>
+        <input type="number" id="adult" name="adult" value="0" min="0"><br>
+
+        <label for="child">Child tickets:</label>
+        <input type="number" id="child" name="child" value="0" min="0"><br>
+
+        <label for="rating">Rate our service:</label>
+        <input type="range" id="rating" name="rating" min="1" max="5"><br>
+
+        Total tickets: <output name="total" for="adult child">0</output><br>
+
+        <!-- NEW (task 7): total price, adult RM12 and child RM8 -->
+        Total price (RM): <output name="price" for="adult child">0</output><br>
+
+        <input type="submit" value="Book Now">
+    </form>
+</div>
+
+<div id="footer">
+    <p>&copy; 2026 CineKampus. All rights reserved.</p>
+    <!-- NEW (task 8): footer text using entities for the registered mark and less-than sign -->
+    <p>e-Ticket&reg; &ndash; Campus Cinema &lt; RM10 every Tuesday</p>
+</div>
+</body>
+</html>
