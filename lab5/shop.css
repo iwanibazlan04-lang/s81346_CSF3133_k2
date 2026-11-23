@@ -1,0 +1,109 @@
+/* ===== Page body: Roboto font, paper.gif once at the top right ===== */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url("paper.gif");
+    background-repeat: no-repeat;
+    background-position: right top;
+    margin: 0;
+}
+
+/* ===== Header: title with background image (cover) and white text ===== */
+header {
+    background-image: linear-gradient(rgba(27, 79, 114, 0.75), rgba(27, 79, 114, 0.75)), url("paper.gif");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+/* ===== Headings use the second Google Font (Merriweather) ===== */
+h1 {
+    font-family: 'Merriweather', serif;
+    text-align: center;
+    margin: 0 0 10px 0;
+}
+
+/* ===== Paragraph readability ===== */
+p {
+    line-height: 1.6;
+}
+
+/* ===== Horizontal dark navigation bar ===== */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Hover effect on menu links */
+li a:hover {
+    background-color: #111;
+}
+
+/* Highlight for the current page (Home) */
+li a.active {
+    background-color: #04AA6D;
+}
+
+/* ===== Main content area ===== */
+main {
+    padding: 20px;
+}
+
+/* ===== Product table ===== */
+#products {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#products td, #products th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+/* Grey even rows */
+#products tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Row hover effect */
+#products tr:hover {
+    background-color: #ddd;
+}
+
+/* Table header: green, white, uppercase, centred, 12px vertical padding */
+#products th {
+    background-color: #04AA6D;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+/* Price column aligned to the right */
+#products td.price,
+#products th.price {
+    text-align: right;
+}
+
+/* ===== Footer: subtle background, centred text, padding ===== */
+footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px;
+}
