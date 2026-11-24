@@ -4,26 +4,121 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CSF3133 - Lab Submission</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alata&family=Cormorant+SC:wght@400;500&family=Marcellus&display=swap" rel="stylesheet">
 <style>
-  body{font-family:system-ui,sans-serif;max-width:640px;margin:40px auto;padding:0 16px;line-height:1.6;color:#222}
-  h1{margin-bottom:4px}
-  .info{color:#555;margin-bottom:24px}
-  ul{list-style:none;padding:0}
-  li{border:1px solid #ddd;border-radius:8px;padding:12px 16px;margin-bottom:10px;
-     display:flex;justify-content:space-between;align-items:center;gap:12px}
-  a{color:#2b50f0;font-weight:600;text-decoration:none}
-  a:hover{text-decoration:underline}
+  :root{
+    --pink:#ffd0ec;       /* latar & kotak */
+    --soft-blue:#9fe0ee;  /* kotak bila hover */
+    --link-blue:#2b50f0;  /* link bila hover */
+    --ink:#000;
+  }
+
+  *{box-sizing:border-box}
+
+  body{
+    margin:0;
+    padding:32px 24px 28px;
+    background:var(--pink);
+    color:var(--ink);
+    font-family:"Alata",system-ui,sans-serif;
+    text-align:center;
+    line-height:1.5;
+  }
+
+  h1{
+    font-family:"Marcellus",Georgia,serif;
+    font-weight:400;
+    font-size:2.2rem;
+    margin:0 0 20px;
+    letter-spacing:.02em;
+  }
+
+  .course{
+    font-family:"Marcellus",Georgia,serif;
+    font-size:1.7rem;
+    font-weight:400;
+    margin:0 0 6px;
+  }
+
+  .info{
+    font-family:"Marcellus",Georgia,serif;
+    font-size:1.25rem;
+    margin:0 0 36px;
+  }
+
+  /* ---------- Kotak lab ---------- */
+  ul{
+    list-style:none;
+    padding:0;
+    margin:0 auto;
+    max-width:1100px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:34px 24px;
+  }
+
+  li{
+    background:var(--pink);
+    border:1px solid var(--ink);
+    border-radius:14px;
+    padding:12px 16px 16px;
+    font-family:"Marcellus",Georgia,serif;
+    font-size:1.1rem;          /* saiz tajuk "Lab 1", "Lab 2", ... */
+    transition:background-color .25s ease;
+  }
+  li:hover{
+    background:var(--soft-blue);
+  }
+
+  /* ---------- Link ---------- */
+  a{
+    display:list-item;
+    list-style:disc inside;
+    font-family:"Alata",system-ui,sans-serif;
+    font-size:.82rem;
+    color:var(--ink);
+    text-decoration:none;
+    font-weight:400;
+    transition:color .2s ease;
+  }
+  a:hover,
+  a:focus-visible{
+    color:var(--link-blue);
+  }
+
+  /* ---------- Peringatan ---------- */
+  .reminder{
+    max-width:880px;
+    margin:36px auto 0;
+    font-family:"Cormorant SC",Georgia,serif;
+    font-size:.9rem;
+    color:#5b3a50;
+    letter-spacing:.02em;
+  }
+  .reminder span{display:block;margin-bottom:2px}
+
+  /* ---------- Responsif ---------- */
+  @media (max-width:900px){
+    ul{grid-template-columns:repeat(2,1fr)}
+  }
+  @media (max-width:520px){
+    ul{grid-template-columns:1fr}
+    h1{font-size:1.8rem}
+    .course{font-size:1.35rem}
+  }
 </style>
 </head>
 <body>
 
-<h1>CSF3133 Web Based Interface Design</h1>
+<h1>LAB EXERCISE</h1>
+<h2 class="course">CSF3133 Web Based Interface Design</h2>
 <p class="info">
   Nama: Iwani Nursofi Binti Mohamad Bazlan<br>
   No. Matrik: S81346
 </p>
 
-<h2>Senarai Lab</h2>
 <ul>
  <li>Lab 1 <a href="lab1/LAB1.html">Lab 1</a>
                     <a href="lab1/contact.html">Contact</a>
@@ -39,7 +134,7 @@
   
   <li>Lab 3 <a href="lab3/lab3.html">Lab 3 Wonderbuuk</a>
             <a href="lab3/lab3ExerA.html">ExerA</a>
-            <a href="lab3/lab3ExerA.html">ExerA</a>
+            <a href="lab3/lab3_ExerB.html">ExerA</a>
   </li>
 
   
@@ -58,6 +153,11 @@
            <a href="lab6/grade.html">ExerB</a> 
   </li>
 </ul>
+
+<p class="reminder">
+  <span>A little reminder for Iwani Nursofi:</span>
+  “Believe in yourself, work hard in silence, and let your 4.00 speak louder than words. You’re not just chasing a perfect result; you’re proving to yourself that you can achieve something you once only prayed for.”
+</p>
 
 </body>
 </html>
